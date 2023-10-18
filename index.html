@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">Hello my Name is Joy</h1>
+    <button onclick="a()">Update</button>
+    <script>
+        // this we can change the text 
+        function a() {
+            let value = document.getElementById("h1").innerHTML
+            let newvalue = value.split(" ") // it will transform my string(Hello my Name is Joy) in h1 to  an array example : newvalue = ['Hello', 'my', 'Name', 'is', 'Joy']
+
+            for (let i = 0; i < newvalue.length; i++) {// here i am just triversing my array(newvalue)
+
+                if (newvalue[i] === "Joy") {// when i get 'joy' in my elements of array 
+                    newvalue[i] = "Bhavdeep Singh"// then i replace my previous element value 'joy' with 'Bhavdeep Singh'
+                }
+
+            }
+            // by doing above steps my array is changed means it will look like this newvalue = ['Hello', 'my', 'Name', 'is', 'Bhavdeep Singh']
+            document.getElementById("h1").innerHTML = newvalue.join(" ")// now in this steps i am just joining my array elements and separate them with " " and  make a string Hello my Name is Bhavdeep Singh
+            // and asigning this string to element having id='h1' 
+
+        }
+
+
+    </script>
+</body>
+
+</html>

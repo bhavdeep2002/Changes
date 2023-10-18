@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="change()">change</button>
+    
+    <script>
+        data={// object
+            Name:"Bhavdeep Singh"
+        }
+
+        const h1= document.createElement('h1')// creating a h1 element in DOM
+        h1.id="h1"// assigning h1 element id
+        h1.innerHTML=`Hello my name is ${data.Name}`// placeing the value in h1 and a object key
+        document.body.appendChild(h1)
+
+        const change=()=>{
+            data.Name="Joy"
+            document.getElementById('h1').innerHTML=`Hello my name is ${data.Name}`// re-rendering h1 element
+        }
+    </script>
+</body>
+</html>
